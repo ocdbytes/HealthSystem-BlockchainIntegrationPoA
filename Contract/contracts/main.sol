@@ -48,7 +48,7 @@ contract Main {
         // Provider instanceOfProvider = Provider(_AddressOfUser);
         // return instanceOfProvider.checkIfProvider(_AddressOfUser);
         return
-            IProvider(0x8F9B0E2128b0110Da7F9d22d3b70AD6Cc42D083c)                .checkIfProvider(_AddressOfUser);
+            IProvider(0x5E7fb7200d3Bc3C3D274de74b795Af23C5f3E89e)                .checkIfProvider(_AddressOfUser);
     }
 
     // MODIFIERS for provider functions
