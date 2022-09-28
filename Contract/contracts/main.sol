@@ -1,16 +1,22 @@
-// SPDX_License_Identifier: MIT
+// SPDX_License_Identifier: UNLICENSED
 pragma solidity >=0.6.6 <0.9.0;
 
 // To allow higher permissions for event having a custom data type (struct)
 pragma experimental ABIEncoderV2;
 
-import "./provider.sol";
+// Interface for Provider Contract Interaction
+interface IProvider {
+    function checkIfProvider(address _AddressOfUser)
+        external
+        payable
+        returns (bool);
+}
 
 contract Main {
     // USER ADDRESS
     address public AddressOfUser;
 
-    constructor() public {
+    constructor() {
         AddressOfUser = msg.sender;
     }
 
@@ -36,11 +42,13 @@ contract Main {
 
     function checkIfProvider(address _AddressOfUser)
         public
-        view
+        payable
         returns (bool)
     {
-        Provider instanceOfProvider = Provider(_AddressOfUser);
-        return instanceOfProvider.checkIfProvider(_AddressOfUser);
+        // Provider instanceOfProvider = Provider(_AddressOfUser);
+        // return instanceOfProvider.checkIfProvider(_AddressOfUser);
+        return
+            IProvider(0x8F9B0E2128b0110Da7F9d22d3b70AD6Cc42D083c)                .checkIfProvider(_AddressOfUser);
     }
 
     // MODIFIERS for provider functions
@@ -55,7 +63,7 @@ contract Main {
     // Check if patient exists in DB
     function checkPatient(address _PatientWalletAddress)
         public
-        view
+        payable
         onlyProvider
         returns (bool)
     {

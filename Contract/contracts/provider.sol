@@ -1,12 +1,10 @@
-// SPDX_License_Identifier: MIT
+// SPDX_License_Identifier: UNLICENSED
 pragma solidity >=0.6.6 <0.9.0;
-
-import "./main.sol";
 
 contract Provider {
     address public AddressOfProvider;
 
-    constructor() public {
+    constructor() {
         AddressOfProvider = msg.sender;
     }
 
@@ -23,13 +21,13 @@ contract Provider {
         return Providers[_UserAddress];
     }
 
-    // To check if patients exists
-    function patientCheck(address _patientWalletAddress)
-        public
-        view
-        returns (bool)
-    {
-        Main instanceOfMain = Main(_patientWalletAddress);
-        return instanceOfMain.checkPatient(_patientWalletAddress);
-    }
+    // // To check if patients exists
+    // function patientCheck(address _patientWalletAddress)
+    //     public
+    //     payable
+    //     returns (bool)
+    // {
+    //     Main instanceOfMain = Main(_patientWalletAddress);
+    //     return instanceOfMain.checkPatient(_patientWalletAddress);
+    // }
 }
