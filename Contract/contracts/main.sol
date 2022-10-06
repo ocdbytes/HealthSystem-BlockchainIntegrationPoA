@@ -34,6 +34,7 @@ contract Main {
     // EVENTS for Data in blockchain
     event ValidatePatient(uint256 id, bool ValidPatient);
     event InvalidatePatient(uint256 id, bool ValidPatient);
+    event PatientAdded(address _PatientAddress, string _PatientKeyGenerated);
 
     // Main Database of the Keys and Patients
     mapping(address => mapping(uint256 => PatientsData)) public Patients;
@@ -48,7 +49,8 @@ contract Main {
         // Provider instanceOfProvider = Provider(_AddressOfUser);
         // return instanceOfProvider.checkIfProvider(_AddressOfUser);
         return
-            IProvider(0x5E7fb7200d3Bc3C3D274de74b795Af23C5f3E89e)                .checkIfProvider(_AddressOfUser);
+            IProvider(0x5E7fb7200d3Bc3C3D274de74b795Af23C5f3E89e)
+                .checkIfProvider(_AddressOfUser);
     }
 
     // MODIFIERS for provider functions
@@ -87,6 +89,7 @@ contract Main {
         p.PatientKey.Valid = true;
         p.ValidPatient = true;
         KeysGenerated[_PatientAddress]++;
+        emit PatientAdded(_PatientAddress, _PatientKeyGenerated);
     }
 
     function getSelfKeys() public view returns (PatientsData memory data) {

@@ -11,8 +11,8 @@ load_dotenv()
 # TEMP KEYS
 main_config = {
     "chain_id": 1337,
-    "my_address": "0xb2F6E464be78C5206604cB4968B2756F5B9EE1FC",
-    "my_private_key": "038179b31538650bd4729881c83d1e933eadd4ea3b0d15ad7be94cd42a14b770"
+    "my_address": "0xFa1617f2cA998e78d51a06f4016aA259Dba4194E",
+    "my_private_key": "d9cc2735fe861af4615a26d139b02af3f01a0d1bc3770f7ac998ea334f4d716b"
 }
 
 w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))

@@ -3,16 +3,26 @@ pragma solidity >=0.6.6 <0.9.0;
 
 contract Provider {
     address public AddressOfProvider;
+    address public owner;
 
     constructor() {
         AddressOfProvider = msg.sender;
+        owner = msg.sender;
     }
 
     // Keeping the record of the providers in the network
     mapping(address => bool) public Providers;
 
+    modifier onlyOwner() {
+        require(
+            msg.sender == owner,
+            "you need to be a contract owner in order to execute this function"
+        );
+        _;
+    }
+
     // Set user as a provider
-    function setProvider(address _UserAddress) private {
+    function setProvider(address _UserAddress) private onlyOwner {
         Providers[_UserAddress] = true;
     }
 
@@ -20,14 +30,4 @@ contract Provider {
     function checkIfProvider(address _UserAddress) public view returns (bool) {
         return Providers[_UserAddress];
     }
-
-    // // To check if patients exists
-    // function patientCheck(address _patientWalletAddress)
-    //     public
-    //     payable
-    //     returns (bool)
-    // {
-    //     Main instanceOfMain = Main(_patientWalletAddress);
-    //     return instanceOfMain.checkPatient(_patientWalletAddress);
-    // }
 }

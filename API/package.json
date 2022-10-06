@@ -7,6 +7,7 @@
         "dev": "nodemon --config nodemon.json src/app.ts"
     },
     "dependencies": {
+        "@types/morgan": "^1.9.3",
         "bcrypt": "^5.0.1",
         "config": "^3.3.8",
         "cors": "^2.8.5",
@@ -16,10 +17,12 @@
         "jsonwebtoken": "^8.5.1",
         "lodash": "^4.17.21",
         "mongoose": "^6.6.2",
+        "morgan": "^1.10.0",
         "nanoid": "^4.0.0",
         "nodemon": "^2.0.20",
         "pino": "^8.6.1",
         "pino-pretty": "^9.1.0",
+        "winston": "^3.8.2",
         "yup": "^0.32.11",
         "zod": "^3.19.1"
     },
