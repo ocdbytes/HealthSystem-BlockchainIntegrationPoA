@@ -28,11 +28,17 @@ Nodes : To fetch the data from the Blockchain.
 - Blockchain Smart Contracts
 - Cloud Integrations
 
+**Proposed Architecture for the System**
+
 <p align="center">
 <img src="./Readme_images/1.png" width="50%"></img>
 </p>
 
-Proposed Architecture for the system.
+**OUR ARCHITECTURE & DATA FLOW with entities 👷🚀**
+
+<p align="center">
+<img src="./Readme_images/NewDiagram.png" width="50%"></img>
+</p>
 
 ### Contracts :
 
@@ -56,3 +62,26 @@ The deployment is being done on the Ganache Network for testing purposes and we 
 **Compilation Output :**
 
 <img src="./Readme_images/3.png"></img>
+
+From here we can observe that our contract has no errors or so we will now deploy our contract on two different networks.
+
+- Polygon Mumbai Testnet
+- Ethereum Goerli Testnet
+
+### We will use Remix IDE to deploy the contracts to the Test nets
+
+**POLYGON**
+
+---
+
+- Provider.sol → `0x924bDF9655e84a65Cb9Af6431Ac9E7Eb04A550f8`
+- Main.sol → `0x19f10b2E9E1fC1D57Af3F489Fb78A5463b6ffF82`
+
+**GOERLI**
+
+---
+
+- Provider.sol → `0x908131D2ED45370ba51c578b9E2003f37b82E13b`
+- Main.sol → `0xC9de7bbE283D5D11614d3450c2f583bfBE3c4aaB`
+
+Contracts Deployed ✅ on Blockchain (Polygon Mumbai & Ethereum Goerli) 📦

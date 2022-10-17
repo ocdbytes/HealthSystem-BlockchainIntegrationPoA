@@ -22,7 +22,7 @@ contract Provider {
     }
 
     // Set user as a provider
-    function setProvider(address _UserAddress) private onlyOwner {
+    function setProvider(address _UserAddress) public onlyOwner {
         Providers[_UserAddress] = true;
     }
 

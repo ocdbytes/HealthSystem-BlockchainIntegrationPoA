@@ -11,8 +11,8 @@ load_dotenv()
 # TEMP KEYS
 main_config = {
     "chain_id": 1337,
-    "my_address": "0xFa1617f2cA998e78d51a06f4016aA259Dba4194E",
-    "my_private_key": "d9cc2735fe861af4615a26d139b02af3f01a0d1bc3770f7ac998ea334f4d716b"
+    "my_address": "0x52182D340cBd73A8Fc00d49825F275Ffe56813dD",
+    "my_private_key": "b9e934fb3f594cd79926d391809c6b49e290d6041aaf372487d6e3bc0155ad46"
 }
 
 w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
@@ -87,7 +87,7 @@ def deployContract(contract_file: string, contract_class: string):
 def updateAddressInMain(addressOfProvider: string):
     with open("../contracts/main.sol", 'r') as f:
         data = f.readlines()
-    data[50] = f"            IProvider({addressOfProvider})"
+    data[51] = f"            IProvider({addressOfProvider})"
     with open("../contracts/main.sol", 'w') as f:
         f.writelines(data)
     print("Address of Provider Contract in Main is Edited ✅ ........")
