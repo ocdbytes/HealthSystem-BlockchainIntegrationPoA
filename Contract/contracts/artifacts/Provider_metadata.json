@@ -73,6 +73,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_UserAddress",
+						"type": "address"
+					}
+				],
+				"name": "setProvider",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -103,10 +116,11 @@
 	},
 	"sources": {
 		"Contract/contracts/provider.sol": {
-			"keccak256": "0x91608a3cbb3ec8b62f68bc10d29300de7ea09f13e96e2d1f00a4bf579aef7065",
+			"keccak256": "0x2e34771e29149cb4be70ec04be744fab71a276b180a465d9371c72c791e37984",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://2260e91194da7615e858bef2f1b5727f639ef76b84fd6a6d8f637f26b97964a2",
-				"dweb:/ipfs/QmWSxpD8UwJiMT2wXEk5hFPfTUAgYrja2BGERT7NJMsr1F"
+				"bzz-raw://abca7f2c1745ce2127e76a28cf1e1de8bb30a722e1e89958be322066a820f3be",
+				"dweb:/ipfs/QmP9HAC7qULqgvNtXVJRGwMjnqtVgTFXsWLQVYncGVX58V"
 			]
 		}
 	},

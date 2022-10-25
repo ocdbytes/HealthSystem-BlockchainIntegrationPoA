@@ -1,0 +1,26 @@
+FunctionName,ExecutionTime,ChainName,CountNumber
+ProviderContractInitialisation&Connection,0.04735064506530762,Polygon Mumbai,1
+ProviderContractInitialisation&Connection,0.035980939865112305,Polygon Mumbai,2
+ProviderContractInitialisation&Connection,0.03587484359741211,Polygon Mumbai,3
+ProviderContractInitialisation&Connection,0.02461409568786621,Polygon Mumbai,4
+ProviderContractInitialisation&Connection,0.03263092041015625,Polygon Mumbai,5
+ProviderContractInitialisation&Connection,0.03390383720397949,Polygon Mumbai,6
+GettingSelfInfo,9.308829069137573,Polygon Mumbai,1
+GettingSelfInfo,5.35958194732666,Polygon Mumbai,2
+GettingSelfInfo,6.5022499561309814,Polygon Mumbai,3
+GettingSelfInfo,8.725234985351562,Polygon Mumbai,4
+GettingSelfInfo,6.78740119934082,Polygon Mumbai,5
+GettingSelfInfo,9.984558820724487,Polygon Mumbai,6
+GetOwner-Contract,0.2857179641723633,Polygon Mumbai,1
+GetOwner-Contract,0.2803068161010742,Polygon Mumbai,2
+GetOwner-Contract,0.2775309085845947,Polygon Mumbai,3
+GetOwner-Contract,0.27541494369506836,Polygon Mumbai,4
+GetOwner-Contract,0.27487635612487793,Polygon Mumbai,5
+GetOwner-Contract,0.2933661937713623,Polygon Mumbai,6
+GetOwner-Contract,0.41277527809143066,Polygon Mumbai,7
+AddProvider,19.309352159500122,Polygon Mumbai,1
+AddProvider,10.8803870677948,Polygon Mumbai,2
+AddProvider,6.788271903991699,Polygon Mumbai,3
+AddProvider,12.357316255569458,Polygon Mumbai,4
+AddProvider,8.340348243713379,Polygon Mumbai,5
+AddProvider,11.239354133605957,Polygon Mumbai,6

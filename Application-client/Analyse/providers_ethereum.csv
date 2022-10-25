@@ -1,0 +1,25 @@
+FunctionName,ExecutionTime,ChainName,CountNumber
+ProviderContractInitialisation&Connection,0.08561205863952637,Ethereum Goerli,1
+ProviderContractInitialisation&Connection,0.027936935424804688,Ethereum Goerli,2
+ProviderContractInitialisation&Connection,0.032328128814697266,Ethereum Goerli,3
+ProviderContractInitialisation&Connection,0.03937363624572754,Ethereum Goerli,4
+ProviderContractInitialisation&Connection,0.06220293045043945,Ethereum Goerli,5
+GettingSelfInfo,8.442176103591919,Ethereum Goerli,1
+GettingSelfInfo,29.622561931610107,Ethereum Goerli,2
+GettingSelfInfo,20.26450824737549,Ethereum Goerli,3
+GettingSelfInfo,40.34004187583923,Ethereum Goerli,4
+GettingSelfInfo,19.74454355239868,Ethereum Goerli,5
+GettingSelfInfo,140,Ethereum Goerli,6
+GetOwner-Contract,0.3372151851654053,Ethereum Goerli,1
+GetOwner-Contract,0.29731202125549316,Ethereum Goerli,2
+GetOwner-Contract,0.5166478157043457,Ethereum Goerli,3
+GetOwner-Contract,0.41835522651672363,Ethereum Goerli,4
+GetOwner-Contract,0.3351008892059326,Ethereum Goerli,5
+GetOwner-Contract,0.2996799945831299,Ethereum Goerli,6
+GetOwner-Contract,0.3977630138397217,Ethereum Goerli,7
+AddProvider,26.078560829162598,Ethereum Goerli,1
+AddProvider,20.713390111923218,Ethereum Goerli,2
+AddProvider,130,Ethereum Goerli,3
+AddProvider,80.38592410087585,Ethereum Goerli,4
+AddProvider,17.71244502067566,Ethereum Goerli,5
+AddProvider,13.694267749786377,Ethereum Goerli,6

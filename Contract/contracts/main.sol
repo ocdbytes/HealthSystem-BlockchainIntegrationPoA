@@ -1,4 +1,4 @@
-// SPDX_License_Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.6.6 <0.9.0;
 
 // To allow higher permissions for event having a custom data type (struct)
@@ -49,7 +49,8 @@ contract Main {
         // Provider instanceOfProvider = Provider(_AddressOfUser);
         // return instanceOfProvider.checkIfProvider(_AddressOfUser);
         return
-            IProvider(0x3A36bf2c867C14FBd2565a2ecAc6848917533415).checkIfProvider(_AddressOfUser);
+            IProvider(0x3A36bf2c867C14FBd2565a2ecAc6848917533415)
+                .checkIfProvider(_AddressOfUser);
     }
 
     // MODIFIERS for provider functions
