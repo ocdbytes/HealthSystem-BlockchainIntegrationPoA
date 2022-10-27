@@ -1,0 +1,21 @@
+FunctionName,ExecutionTime,ChainName,CountNumber
+MainContractInitialisation&Connection,0.047647953033447266,Polygon Mumbai,1
+MainContractInitialisation&Connection,0.03446602821350098,Polygon Mumbai,2
+MainContractInitialisation&Connection,0.039067983627319336,Polygon Mumbai,3
+MainContractInitialisation&Connection,0.02909111976623535,Polygon Mumbai,4
+MainContractInitialisation&Connection,0.027332782745361328,Polygon Mumbai,5
+GetSelfKeys,21.020720958709717,Polygon Mumbai,1
+GetSelfKeys,8.806632995605469,Polygon Mumbai,2
+GetSelfKeys,14.220090866088867,Polygon Mumbai,3
+GetSelfKeys,15.574299812316895,Polygon Mumbai,4
+GetSelfKeys,12.664725065231323,Polygon Mumbai,5
+CheckIfPatientExists,12.016494989395142,Polygon Mumbai,1
+CheckIfPatientExists,13.294642925262451,Polygon Mumbai,2
+CheckIfPatientExists,16.870840072631836,Polygon Mumbai,3
+CheckIfPatientExists,10.608045101165771,Polygon Mumbai,4
+CheckIfPatientExists,13.448563814163208,Polygon Mumbai,5
+AddPatient,71.44609713554382,Polygon Mumbai,1
+AddPatient,24.66150188446045,Polygon Mumbai,2
+AddPatient,19.57063388824463,Polygon Mumbai,3
+AddPatient,11.844162940979004,Polygon Mumbai,4
+AddPatient,14.076171159744263,Polygon Mumbai,5

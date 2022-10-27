@@ -13,10 +13,10 @@ class Provider:
         self.address = address
         self.privateKey = privateKey
         self.w3 = Web3(Web3.HTTPProvider(
-            "POLYGON(Quicknode)/ETH(Infura) -> HTTP Provider Link"))
+            "https://goerli.infura.io/v3/9e47bc5ab190496aa6ea8cba79719d7a"))
         print("Blockchain Connected.... 📦🔗")
         self.Provider = self.w3.eth.contract(
-            address="0x924bDF9655e84a65Cb9Af6431Ac9E7Eb04A550f8", abi=abi)
+            address="0x908131D2ED45370ba51c578b9E2003f37b82E13b", abi=abi)
         print("------------------------------------------------------------")
         print("Contract for [PROVIDER] interaction initialised ✅")
         print("------------------------------------------------------------")
@@ -43,7 +43,7 @@ class Provider:
         print('''------------------------[PROVIDER'S SCREEN]------------------------
 1. Get Self Info
 2. Get Contract Owner
-3. Add Provider
+3. Add Provider (OWNER FUNCTION)
 q. Quit
 -------------------------------------------------------------------
         ''')
@@ -65,7 +65,7 @@ q. Quit
         print("------------------------[SELF INFO]------------------------")
         print("Your Address : ", self.address)
         transaction = self.Provider.functions.checkIfProvider(self.address).buildTransaction({
-            "chainId": 80001,
+            "chainId": 5,
             "from": self.address,
             "nonce": n,
             "gasPrice": self.w3.eth.gas_price
@@ -77,7 +77,8 @@ q. Quit
             signed_transaction.rawTransaction)
         transaction_recipt = self.w3.eth.wait_for_transaction_receipt(
             send_transaction)
-        print("Are you a Provider ? : ", transaction_recipt["status"])
+        print("Are you a Provider ? : ",
+              self.Provider.functions.checkIfProvider(self.address).call())
         print("------------------------------------------------------------")
         self.OptionsScreen()
 
@@ -93,7 +94,7 @@ q. Quit
         n = self.w3.eth.getTransactionCount(self.address)
         inp = input("Enter the Address(to be added as provider) > ")
         transaction = self.Provider.functions.setProvider(inp).buildTransaction({
-            "chainId": 80001,
+            "chainId": 5,
             "from": self.address,
             "nonce": n,
             "gasPrice": self.w3.eth.gas_price

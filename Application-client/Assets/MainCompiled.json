@@ -1,0 +1,221 @@
+[
+    {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "bool",
+                "name": "ValidPatient",
+                "type": "bool"
+            }
+        ],
+        "name": "InvalidatePatient",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "_PatientAddress",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "_PatientKeyGenerated",
+                "type": "string"
+            }
+        ],
+        "name": "PatientAdded",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "bool",
+                "name": "ValidPatient",
+                "type": "bool"
+            }
+        ],
+        "name": "ValidatePatient",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "AddressOfUser",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "Patients",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "Key",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "Valid",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct Main.AccessKey",
+                "name": "PatientKey",
+                "type": "tuple"
+            },
+            {
+                "internalType": "bool",
+                "name": "ValidPatient",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_PatientAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "_PatientKeyGenerated",
+                "type": "string"
+            }
+        ],
+        "name": "addPatientToDatabase",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_AddressOfUser",
+                "type": "address"
+            }
+        ],
+        "name": "checkIfProvider",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_PatientWalletAddress",
+                "type": "address"
+            }
+        ],
+        "name": "checkPatient",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getSelfKeys",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "id",
+                        "type": "uint256"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "string",
+                                "name": "Key",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "bool",
+                                "name": "Valid",
+                                "type": "bool"
+                            }
+                        ],
+                        "internalType": "struct Main.AccessKey",
+                        "name": "PatientKey",
+                        "type": "tuple"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "ValidPatient",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct Main.PatientsData",
+                "name": "data",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

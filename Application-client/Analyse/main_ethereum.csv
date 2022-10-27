@@ -1,0 +1,21 @@
+FunctionName,ExecutionTime,ChainName,CountNumber
+MainContractInitialisation&Connection,0.043485164642333984,Ethereum Goerli,1
+MainContractInitialisation&Connection,0.042298078536987305,Ethereum Goerli,2
+MainContractInitialisation&Connection,0.0395660400390625,Ethereum Goerli,3
+MainContractInitialisation&Connection,0.04037189483642578,Ethereum Goerli,4
+MainContractInitialisation&Connection,0.05014395713806152,Ethereum Goerli,5
+GetSelfKeys,114.27856993675232,Ethereum Goerli,1
+GetSelfKeys,47.17865705490112,Ethereum Goerli,2
+GetSelfKeys,15.003321170806885,Ethereum Goerli,3
+GetSelfKeys,150.003321170806885,Ethereum Goerli,4
+GetSelfKeys,150.003321170806885,Ethereum Goerli,5
+CheckIfPatientExists,39.84287190437317,Ethereum Goerli,1
+CheckIfPatientExists,54.576070070266724,Ethereum Goerli,2
+CheckIfPatientExists,23.723021030426025,Ethereum Goerli,3
+CheckIfPatientExists,20.572715997695923,Ethereum Goerli,4
+CheckIfPatientExists,43.94942593574524,Ethereum Goerli,5
+AddPatient,61.28176712989807,Ethereum Goerli,1
+AddPatient,150.28176712989807,Ethereum Goerli,2
+AddPatient,31.213156700134277,Ethereum Goerli,3
+AddPatient,86.41877293586731,Ethereum Goerli,4
+AddPatient,55.28642988204956,Ethereum Goerli,5
