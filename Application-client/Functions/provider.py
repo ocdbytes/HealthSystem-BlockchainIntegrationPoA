@@ -13,7 +13,7 @@ class Provider:
         self.address = address
         self.privateKey = privateKey
         self.w3 = Web3(Web3.HTTPProvider(
-            "https://goerli.infura.io/v3/9e47bc5ab190496aa6ea8cba79719d7a"))
+            "INFURA/QUICKNODE LINK"))
         print("Blockchain Connected.... 📦🔗")
         self.Provider = self.w3.eth.contract(
             address="0x908131D2ED45370ba51c578b9E2003f37b82E13b", abi=abi)

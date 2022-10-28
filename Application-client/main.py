@@ -20,7 +20,7 @@ ETH(Groeli) : 5
 main_config = {
     "chain_id": 5,
     "my_address": "0x839F42a69Cc24F391DC4F09273f494578653edEC",
-    "my_private_key": "6e96bd2242a939fe98149cc8e736170555cbd32e102e2d52fe1d004ac04eb356"
+    "my_private_key": "PRIVATE_KEY"
 }
 
 
