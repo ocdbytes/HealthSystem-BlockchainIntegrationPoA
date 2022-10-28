@@ -85,3 +85,23 @@ From here we can observe that our contract has no errors or so we will now deplo
 - Main.sol → `0xC9de7bbE283D5D11614d3450c2f583bfBE3c4aaB`
 
 Contracts Deployed ✅ on Blockchain (Polygon Mumbai & Ethereum Goerli) 📦
+
+### Graphs
+
+**MAIN FUNCTION GRAPHS (ETHEREUM/POLYGON)**
+<img src="./Readme_images/MainFunctionGraphs.png"></img>
+
+**PROVIDER FUNCTION GRAPHS (ETHEREUM/POLYGON)**
+<img src="./Readme_images/ProviderFunctionGraphs.png"></img>
+
+## Encryption
+
+Here we will be using Eliptical Curve Cryptography Algorithm for generating the public/private key pair.
+
+**ECC Comparision Table**
+
+This is a comparision table demonstrating the size of the **RSA Key vs ECC Key** in order to achieve the same security level.
+
+<img src="./Readme_images/4.png" width="50%"></img>
+
+Here we will be using **"secp256k1 ECC Key"** which will be 256 bit Key with the same security level of the **"3072 bit RSA Key"**
