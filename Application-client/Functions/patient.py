@@ -12,10 +12,10 @@ class Main:
         self.address = address
         self.privateKey = privateKey
         self.w3 = Web3(Web3.HTTPProvider(
-            "INFURA/QUICKNODE LINK"))
+            "http://127.0.0.1:8545"))
         print("Blockchain Connected.... 📦🔗")
         self.Main = self.w3.eth.contract(
-            address="0xC9de7bbE283D5D11614d3450c2f583bfBE3c4aaB", abi=abi)
+            address="0xE7eD6747FaC5360f88a2EFC03E00d25789F69291", abi=abi)
         print("------------------------------------------------------------")
         print("Contract for [PATIENT/USER] interaction initialised ✅")
         print("------------------------------------------------------------")
@@ -61,7 +61,7 @@ q. Quit
         n = self.w3.eth.getTransactionCount(self.address)
         print("------------------------[SELF KEYS]------------------------")
         transaction = self.Main.functions.getSelfKeys().buildTransaction({
-            "chainId": 5,
+            "chainId": 1337,
             "from": self.address,
             "nonce": n,
             "gasPrice": self.w3.eth.gas_price
@@ -84,7 +84,7 @@ q. Quit
             "------------------------[CHECK IF PATIENTS EXISTS]------------------------")
         addr = input("Address > ")
         transaction = self.Main.functions.checkPatient(addr).buildTransaction({
-            "chainId": 5,
+            "chainId": 1337,
             "from": self.address,
             "nonce": n,
             "gasPrice": self.w3.eth.gas_price
@@ -112,7 +112,7 @@ q. Quit
         name = input("Patient Address > ")
         key = input("Access Key > ")
         transaction = self.Main.functions.addPatientToDatabase(name, key).buildTransaction({
-            "chainId": 5,
+            "chainId": 1337,
             "from": self.address,
             "nonce": n,
             "gasPrice": self.w3.eth.gas_price

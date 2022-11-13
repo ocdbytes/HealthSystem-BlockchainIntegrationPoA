@@ -15,12 +15,13 @@ Chain ID
 
 POLYGON(Mumbai) : 80001
 ETH(Groeli) : 5
+Brownie : 1337
 '''
 
 main_config = {
-    "chain_id": 5,
-    "my_address": "0x839F42a69Cc24F391DC4F09273f494578653edEC",
-    "my_private_key": "PRIVATE_KEY"
+    "chain_id": 1337,
+    "my_address": "0x66aB6D9362d4F35596279692F0251Db635165871",
+    "my_private_key": "0xbbfbee4961061d506ffbb11dfea64eba16355cbf1d9c29613126ba7fec0aed5d"
 }
 
 

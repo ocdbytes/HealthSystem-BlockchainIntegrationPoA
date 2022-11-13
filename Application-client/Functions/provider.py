@@ -13,10 +13,10 @@ class Provider:
         self.address = address
         self.privateKey = privateKey
         self.w3 = Web3(Web3.HTTPProvider(
-            "INFURA/QUICKNODE LINK"))
+            "http://127.0.0.1:8545"))
         print("Blockchain Connected.... 📦🔗")
         self.Provider = self.w3.eth.contract(
-            address="0x908131D2ED45370ba51c578b9E2003f37b82E13b", abi=abi)
+            address="0x602C71e4DAC47a042Ee7f46E0aee17F94A3bA0B6", abi=abi)
         print("------------------------------------------------------------")
         print("Contract for [PROVIDER] interaction initialised ✅")
         print("------------------------------------------------------------")
@@ -65,7 +65,7 @@ q. Quit
         print("------------------------[SELF INFO]------------------------")
         print("Your Address : ", self.address)
         transaction = self.Provider.functions.checkIfProvider(self.address).buildTransaction({
-            "chainId": 5,
+            "chainId": 1337,
             "from": self.address,
             "nonce": n,
             "gasPrice": self.w3.eth.gas_price
@@ -94,7 +94,7 @@ q. Quit
         n = self.w3.eth.getTransactionCount(self.address)
         inp = input("Enter the Address(to be added as provider) > ")
         transaction = self.Provider.functions.setProvider(inp).buildTransaction({
-            "chainId": 5,
+            "chainId": 1337,
             "from": self.address,
             "nonce": n,
             "gasPrice": self.w3.eth.gas_price

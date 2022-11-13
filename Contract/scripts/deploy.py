@@ -11,11 +11,11 @@ load_dotenv()
 # TEMP KEYS
 main_config = {
     "chain_id": 1337,
-    "my_address": "0x52182D340cBd73A8Fc00d49825F275Ffe56813dD",
-    "my_private_key": "b9e934fb3f594cd79926d391809c6b49e290d6041aaf372487d6e3bc0155ad46"
+    "my_address": "0x66aB6D9362d4F35596279692F0251Db635165871",
+    "my_private_key": "0xbbfbee4961061d506ffbb11dfea64eba16355cbf1d9c29613126ba7fec0aed5d"
 }
 
-w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
+w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545"))
 print("-----------------------------------------------------------------------------")
 print("Connected to the blockchain 📦 ........")
 print("-----------------------------------------------------------------------------")
