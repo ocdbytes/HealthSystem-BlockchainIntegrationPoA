@@ -218,3 +218,9 @@ Plot Value = ( Average Value of Ganache / Average value of Network Values )^-1 *
 ### Throughput Graph
 
 <img src="./Readme_images/output_throughput.png" width="50%"></img>
+
+Hence the graphs verify our prediction that polygon is better for using on blockchain systems rather than ethereum due to the follwing reasons :
+- less throughput
+- less interaction time
+- low resource utilisation
+- low gas fees
