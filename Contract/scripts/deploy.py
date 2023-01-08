@@ -10,12 +10,12 @@ load_dotenv()
 
 # TEMP KEYS
 main_config = {
-    "chain_id": 1337,
-    "my_address": "0x66aB6D9362d4F35596279692F0251Db635165871",
-    "my_private_key": "0xbbfbee4961061d506ffbb11dfea64eba16355cbf1d9c29613126ba7fec0aed5d"
+    "chain_id": 5,
+    "my_address": os.getenv("WALLET_ADDRESS"),
+    "my_private_key": os.getenv("WALLET_PRIVATE_KEY")
 }
 
-w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545"))
+w3 = Web3(Web3.HTTPProvider(os.getenv("NODE_PROVIDER_LINK")))
 print("-----------------------------------------------------------------------------")
 print("Connected to the blockchain 📦 ........")
 print("-----------------------------------------------------------------------------")
@@ -87,7 +87,7 @@ def deployContract(contract_file: string, contract_class: string):
 def updateAddressInMain(addressOfProvider: string):
     with open("../contracts/main.sol", 'r') as f:
         data = f.readlines()
-    data[51] = f"            IProvider({addressOfProvider})"
+    data[57] = f"            IProvider({addressOfProvider})"
     with open("../contracts/main.sol", 'w') as f:
         f.writelines(data)
     print("Address of Provider Contract in Main is Edited ✅ ........")

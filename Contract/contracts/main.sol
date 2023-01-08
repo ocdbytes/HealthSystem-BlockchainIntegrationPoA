@@ -55,8 +55,7 @@ contract Main {
         returns (bool)
     {
         return
-            IProvider(0x602C71e4DAC47a042Ee7f46E0aee17F94A3bA0B6)
-                .checkIfProvider(_AddressOfUser);
+            IProvider(0xAc12C37e47C3cf8ac162Da3f67364f4676825bb3)                .checkIfProvider(_AddressOfUser);
     }
 
     /// @dev MODIFIERS for provider functions

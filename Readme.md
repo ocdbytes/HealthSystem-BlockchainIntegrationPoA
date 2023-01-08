@@ -224,3 +224,14 @@ Hence the graphs verify our prediction that polygon is better for using on block
 - less interaction time
 - low resource utilisation
 - low gas fees
+
+# New Architecture
+
+<img src="./Readme_images/Arch2.png" width="50%"></img>
+
+**GOERLI**
+
+---
+
+- Provider.sol → `0xAc12C37e47C3cf8ac162Da3f67364f4676825bb3`
+- Main.sol → `0x13a80B65dE569f462e55B2EE8d6796c201C985D3`
