@@ -1,0 +1,14 @@
+digraph{
+0[label="Node Type: ENTRY_POINT 0
+"];
+0->1;
+1[label="Node Type: RETURN 1
+
+EXPRESSION:
+Patients[msg.sender][0]
+
+IRs:
+REF_22(mapping(uint256 => Main.PatientsData)) -> Patients[msg.sender]
+REF_23(Main.PatientsData) -> REF_22[0]
+RETURN REF_23"];
+}

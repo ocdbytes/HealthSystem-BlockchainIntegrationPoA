@@ -1,0 +1,48 @@
+digraph{
+0[label="Node Type: ENTRY_POINT 0
+"];
+0->6;
+1[label="Node Type: NEW VARIABLE 1
+
+EXPRESSION:
+_patient_data = Patients[_PatientWalletAddress][0]
+
+IRs:
+REF_1(mapping(uint256 => Main.PatientsData)) -> Patients[_PatientWalletAddress]
+REF_2(Main.PatientsData) -> REF_1[0]
+_patient_data(Main.PatientsData) := REF_2(Main.PatientsData)"];
+1->2;
+2[label="Node Type: IF 2
+
+EXPRESSION:
+_patient_data.id == 0
+
+IRs:
+REF_3(uint256) -> _patient_data.id
+TMP_2(bool) = REF_3 == 0
+CONDITION TMP_2"];
+2->3[label="True"];
+2->4[label="False"];
+3[label="Node Type: RETURN 3
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True"];
+4[label="Node Type: RETURN 4
+
+EXPRESSION:
+false
+
+IRs:
+RETURN False"];
+6[label="Node Type: EXPRESSION 6
+
+EXPRESSION:
+onlyProvider()
+
+IRs:
+MODIFIER_CALL, Main.onlyProvider()()"];
+6->1;
+}

@@ -1,0 +1,14 @@
+digraph{
+0[label="Node Type: ENTRY_POINT 0
+"];
+0->1;
+1[label="Node Type: RETURN 1
+
+EXPRESSION:
+IProvider(0xAc12C37e47C3cf8ac162Da3f67364f4676825bb3).checkIfProvider(_AddressOfUser)
+
+IRs:
+TMP_0 = CONVERT 982364855862000769711258691455071140812597386163 to IProvider
+TMP_1(bool) = HIGH_LEVEL_CALL, dest:TMP_0(IProvider), function:checkIfProvider, arguments:['_AddressOfUser']  
+RETURN TMP_1"];
+}

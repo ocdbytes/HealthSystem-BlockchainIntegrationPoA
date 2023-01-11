@@ -1,0 +1,11 @@
+strict digraph {
+subgraph cluster_62_Provider {
+label = "Provider"
+"62_constructor" [label="constructor"]
+"62_checkIfProvider" [label="checkIfProvider"]
+"62_setProvider" [label="setProvider"]
+"62_setProvider" -> "62_onlyOwner"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}

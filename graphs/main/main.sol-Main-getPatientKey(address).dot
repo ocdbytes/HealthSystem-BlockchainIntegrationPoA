@@ -1,0 +1,23 @@
+digraph{
+0[label="Node Type: ENTRY_POINT 0
+"];
+0->1;
+1[label="Node Type: EXPRESSION 1
+
+EXPRESSION:
+require(bool,string)(_approvalGranted(_patientAddress),You don't have approval for patient data)
+
+IRs:
+TMP_8(bool) = INTERNAL_CALL, Main._approvalGranted(address)(_patientAddress)
+TMP_9(None) = SOLIDITY_CALL require(bool,string)(TMP_8,You don't have approval for patient data)"];
+1->2;
+2[label="Node Type: RETURN 2
+
+EXPRESSION:
+Patients[_patientAddress][0]
+
+IRs:
+REF_17(mapping(uint256 => Main.PatientsData)) -> Patients[_patientAddress]
+REF_18(Main.PatientsData) -> REF_17[0]
+RETURN REF_18"];
+}

@@ -1,0 +1,20 @@
+strict digraph {
+subgraph cluster_323_Main {
+label = "Main"
+"323_constructor" [label="constructor"]
+"323_approveUserForKeyAccess" [label="approveUserForKeyAccess"]
+"323_checkPatient" [label="checkPatient"]
+"323_getPatientKey" [label="getPatientKey"]
+"323__approvalGranted" [label="_approvalGranted"]
+"323_checkIfProvider" [label="checkIfProvider"]
+"323_getSelfKeys" [label="getSelfKeys"]
+"323_addPatientToDatabase" [label="addPatientToDatabase"]
+"323_addPatientToDatabase" -> "323_onlyProvider"
+"323_getPatientKey" -> "323__approvalGranted"
+"323_checkPatient" -> "323_onlyProvider"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"require(bool,string)" 
+"323_getPatientKey" -> "require(bool,string)"
+}
+}

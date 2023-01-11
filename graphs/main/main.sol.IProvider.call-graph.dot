@@ -1,0 +1,8 @@
+strict digraph {
+subgraph cluster_10_IProvider {
+label = "IProvider"
+"10_checkIfProvider" [label="checkIfProvider"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}

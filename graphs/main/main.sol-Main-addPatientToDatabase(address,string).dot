@@ -1,0 +1,87 @@
+digraph{
+0[label="Node Type: ENTRY_POINT 0
+"];
+0->9;
+1[label="Node Type: NEW VARIABLE 1
+
+EXPRESSION:
+keysCount = KeysGenerated[_PatientAddress]
+
+IRs:
+REF_4(uint256) -> KeysGenerated[_PatientAddress]
+keysCount(uint256) := REF_4(uint256)"];
+1->2;
+2[label="Node Type: NEW VARIABLE 2
+
+EXPRESSION:
+p = Patients[_PatientAddress][keysCount]
+
+IRs:
+REF_5(mapping(uint256 => Main.PatientsData)) -> Patients[_PatientAddress]
+REF_6(Main.PatientsData) -> REF_5[keysCount]
+p(Main.PatientsData) := REF_6(Main.PatientsData)"];
+2->3;
+3[label="Node Type: EXPRESSION 3
+
+EXPRESSION:
+p.id = keysCount
+
+IRs:
+REF_7(uint256) -> p.id
+REF_7 (->p) := keysCount(uint256)"];
+3->4;
+4[label="Node Type: EXPRESSION 4
+
+EXPRESSION:
+p.PatientKey.Key = _PatientKeyGenerated
+
+IRs:
+REF_8(Main.AccessKey) -> p.PatientKey
+REF_9(string) -> REF_8.Key
+REF_9 (->p) := _PatientKeyGenerated(string)"];
+4->5;
+5[label="Node Type: EXPRESSION 5
+
+EXPRESSION:
+p.PatientKey.Valid = true
+
+IRs:
+REF_10(Main.AccessKey) -> p.PatientKey
+REF_11(bool) -> REF_10.Valid
+REF_11 (->p) := True(bool)"];
+5->6;
+6[label="Node Type: EXPRESSION 6
+
+EXPRESSION:
+p.ValidPatient = true
+
+IRs:
+REF_12(bool) -> p.ValidPatient
+REF_12 (->p) := True(bool)"];
+6->7;
+7[label="Node Type: EXPRESSION 7
+
+EXPRESSION:
+KeysGenerated[_PatientAddress] ++
+
+IRs:
+REF_13(uint256) -> KeysGenerated[_PatientAddress]
+TMP_4(uint256) := REF_13(uint256)
+REF_13(-> KeysGenerated) = REF_13 (c)+ 1"];
+7->8;
+8[label="Node Type: EXPRESSION 8
+
+EXPRESSION:
+PatientAdded(_PatientAddress,_PatientKeyGenerated)
+
+IRs:
+Emit PatientAdded(_PatientAddress,_PatientKeyGenerated)"];
+9[label="Node Type: EXPRESSION 9
+
+EXPRESSION:
+onlyProvider()
+
+IRs:
+MODIFIER_CALL, Main.onlyProvider()()"];
+9->1;
+}

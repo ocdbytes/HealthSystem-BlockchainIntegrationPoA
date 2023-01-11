@@ -1,0 +1,17 @@
+digraph{
+0[label="Node Type: ENTRY_POINT 0
+"];
+0->1;
+1[label="Node Type: EXPRESSION 1
+
+EXPRESSION:
+require(bool,string)(checkIfProvider(AddressOfUser) == true,You must be a provider to access this function)
+
+IRs:
+TMP_13(bool) = INTERNAL_CALL, Main.checkIfProvider(address)(AddressOfUser)
+TMP_14(bool) = TMP_13 == True
+TMP_15(None) = SOLIDITY_CALL require(bool,string)(TMP_14,You must be a provider to access this function)"];
+1->2;
+2[label="Node Type: _ 2
+"];
+}
