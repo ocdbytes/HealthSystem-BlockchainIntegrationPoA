@@ -1,0 +1,71 @@
+High Severity (main.sol)
+
+Main.TotalApprovedUsers (main.sol#46) is never initialized. It is used in:
+        - Main.approveUserForKeyAccess(address) (main.sol#105-110)
+        - Main._approvalGranted(address) (main.sol#129-141)
+Main.ApprovedUsers (main.sol#48) is never initialized. It is used in:
+        - Main.approveUserForKeyAccess(address) (main.sol#105-110)
+        - Main._approvalGranted(address) (main.sol#129-141)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-state-variables
+
+Medium Severity (main.sol)
+
+Contract locking ether found:
+        Contract Main (main.sol#15-147) has payable functions:
+         - Main.checkIfProvider(address) (main.sol#52-59)
+         - Main.checkPatient(address) (main.sol#72-84)
+         - Main.addPatientToDatabase(address,string) (main.sol#89-101)
+         - Main.approveUserForKeyAccess(address) (main.sol#105-110)
+        But does not have a function to withdraw the ether
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#contracts-that-lock-ether
+
+Low Severity (main.sol)
+
+Reentrancy in Main.addPatientToDatabase(address,string) (main.sol#89-101):
+        External calls:
+        - onlyProvider() (main.sol#92)
+                - IProvider(0xAc12C37e47C3cf8ac162Da3f67364f4676825bb3).checkIfProvider(_AddressOfUser) (main.sol#57-58)
+        State variables written after the call(s):
+        - KeysGenerated[_PatientAddress] ++ (main.sol#99)
+        - p.id = keysCount (main.sol#95)
+        - p.PatientKey.Key = _PatientKeyGenerated (main.sol#96)
+        - p.PatientKey.Valid = true (main.sol#97)
+        - p.ValidPatient = true (main.sol#98)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+
+Reentrancy in Main.addPatientToDatabase(address,string) (main.sol#89-101):
+        External calls:
+        - onlyProvider() (main.sol#92)
+                - IProvider(0xAc12C37e47C3cf8ac162Da3f67364f4676825bb3).checkIfProvider(_AddressOfUser) (main.sol#57-58)
+        Event emitted after the call(s):
+        - PatientAdded(_PatientAddress,_PatientKeyGenerated) (main.sol#100)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+
+Main.onlyProvider() (main.sol#62-68) compares to a boolean constant:
+        -require(bool,string)(checkIfProvider(AddressOfUser) == true,You must be a provider to access this function) (main.sol#63-66)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#boolean-equality
+
+Pragma version>=0.6.6<0.9.0 (main.sol#2) is too complex
+solc-0.8.17 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+
+Main (main.sol#15-147) should inherit from IProvider (main.sol#8-13)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-inheritance
+
+Parameter IProvider.checkIfProvider(address)._AddressOfUser (main.sol#9) is not in mixedCase
+Parameter Main.checkIfProvider(address)._AddressOfUser (main.sol#52) is not in mixedCase
+Parameter Main.checkPatient(address)._PatientWalletAddress (main.sol#72) is not in mixedCase
+Parameter Main.addPatientToDatabase(address,string)._PatientAddress (main.sol#90) is not in mixedCase
+Parameter Main.addPatientToDatabase(address,string)._PatientKeyGenerated (main.sol#91) is not in mixedCase
+Parameter Main.approveUserForKeyAccess(address)._approveTo (main.sol#105) is not in mixedCase
+Parameter Main.getPatientKey(address)._patientAddress (main.sol#114) is not in mixedCase
+Variable Main.AddressOfUser (main.sol#18) is not in mixedCase
+Variable Main.Patients (main.sol#42) is not in mixedCase
+Variable Main.KeysGenerated (main.sol#44) is not in mixedCase
+Variable Main.TotalApprovedUsers (main.sol#46) is not in mixedCase
+Variable Main.ApprovedUsers (main.sol#48) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+
+Main.AddressOfUser (main.sol#18) should be immutable 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-immutable
+main.sol analyzed (2 contracts with 84 detectors), 22 result(s) found

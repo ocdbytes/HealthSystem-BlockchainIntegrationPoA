@@ -1,0 +1,239 @@
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    Main
+Line:        73
+Source: 
+>     /// @param _PatientWalletAddress Address of the Patient Wallet
+>     function checkPatient(address _PatientWalletAddress)
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         public
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    Main
+Line:        90
+Source: 
+>     /// @param _PatientKeyGenerated Generated key of the patient
+>     function addPatientToDatabase(
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         address _PatientAddress,
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    Main
+Line:        106
+Source: 
+>     /// @param _approveTo Address of the third party
+>     function approveUserForKeyAccess(address _approveTo) public payable {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         uint256 totalApproveUsers = TotalApprovedUsers[msg.sender];
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    Main
+Line:        115
+Source: 
+>     /// @param _patientAddress Address of the patient
+>     function getPatientKey(address _patientAddress)
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         public
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    Main
+Line:        145
+Source: 
+>     /// @dev To get the self keys
+>     function getSelfKeys() public view returns (PatientsData memory data) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         return Patients[msg.sender][0];
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Locked Ether
+Description: Contracts that may receive ether must also allow users to
+             extract the deposited ether from the contract.
+Type:        Violation
+Contract:    Main
+Line:        15
+Source: 
+> 
+> contract Main {
+> ^^^^^^^^^^^^^^^
+>     /// variables ///
+
+[0m
+[0;33mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Warning
+Contract:    Main
+Line:        52
+Source: 
+>     /// @param _AddressOfUser Address of the user
+>     function checkIfProvider(address _AddressOfUser)
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         public
+
+[0m
+[0;33mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Warning
+Contract:    Main
+Line:        115
+Source: 
+>     /// @param _patientAddress Address of the patient
+>     function getPatientKey(address _patientAddress)
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         public
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    Main
+Line:        90
+Source: 
+>     /// @param _PatientKeyGenerated Generated key of the patient
+>     function addPatientToDatabase(
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         address _PatientAddress,
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    Main
+Line:        106
+Source: 
+>     /// @param _approveTo Address of the third party
+>     function approveUserForKeyAccess(address _approveTo) public payable {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         uint256 totalApproveUsers = TotalApprovedUsers[msg.sender];
+
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     Solidity pragma directives
+Description: Avoid complex solidity version pragma statements.
+Type:        Violation
+Contract:    None
+Line:        2
+Source: 
+> // SPDX-License-Identifier: MIT
+> pragma solidity ^0.5.8;
+> ^^^^^^^^^^^^^^^^^^^^^^^
+> 
+
+
+[0m
+[0;31mSeverity:    HIGH
+Pattern:     Unhandled Exception
+Description: The return value of statements that may return error
+             values must be explicitly checked.
+Type:        Violation
+Contract:    Main
+Line:        58
+Source: 
+>         return
+>             IProvider(0xAc12C37e47C3cf8ac162Da3f67364f4676825bb3)
+>             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>                 .checkIfProvider(_AddressOfUser);
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    Main
+Line:        96
+Source: 
+>         PatientsData storage p = Patients[_PatientAddress][keysCount];
+>         p.id = keysCount;
+>         ^^^^^^^^^^^^^^^^
+>         p.PatientKey.Key = _PatientKeyGenerated;
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    Main
+Line:        97
+Source: 
+>         p.id = keysCount;
+>         p.PatientKey.Key = _PatientKeyGenerated;
+>         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         p.PatientKey.Valid = true;
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    Main
+Line:        98
+Source: 
+>         p.PatientKey.Key = _PatientKeyGenerated;
+>         p.PatientKey.Valid = true;
+>         ^^^^^^^^^^^^^^^^^^^^^^^^^
+>         p.ValidPatient = true;
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    Main
+Line:        99
+Source: 
+>         p.PatientKey.Valid = true;
+>         p.ValidPatient = true;
+>         ^^^^^^^^^^^^^^^^^^^^^
+>         KeysGenerated[_PatientAddress]++;
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    Main
+Line:        100
+Source: 
+>         p.ValidPatient = true;
+>         KeysGenerated[_PatientAddress]++;
+>         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         emit PatientAdded(_PatientAddress, _PatientKeyGenerated);
+
+[0m

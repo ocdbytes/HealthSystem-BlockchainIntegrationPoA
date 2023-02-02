@@ -1,0 +1,110 @@
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    Provider
+Line:        25
+Source: 
+>     // Set user as a provider
+>     function setProvider(address _UserAddress) public onlyOwner {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         Providers[_UserAddress] = true;
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    Provider
+Line:        30
+Source: 
+>     // Check if a user address is the provider
+>     function checkIfProvider(address _UserAddress) public view returns (bool) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         return Providers[_UserAddress];
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    Provider
+Line:        25
+Source: 
+>     // Set user as a provider
+>     function setProvider(address _UserAddress) public onlyOwner {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         Providers[_UserAddress] = true;
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    Provider
+Line:        30
+Source: 
+>     // Check if a user address is the provider
+>     function checkIfProvider(address _UserAddress) public view returns (bool) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         return Providers[_UserAddress];
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Solidity Naming Convention
+Description: Reports declarations that do not adhere to Solidity's
+             naming convention.
+Type:        Violation
+Contract:    Provider
+Line:        5
+Source: 
+> contract Provider {
+>     address public AddressOfProvider;
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>     address public owner;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Solidity Naming Convention
+Description: Reports declarations that do not adhere to Solidity's
+             naming convention.
+Type:        Violation
+Contract:    Provider
+Line:        14
+Source: 
+>     // Keeping the record of the providers in the network
+>     mapping(address => bool) public Providers;
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     Solidity pragma directives
+Description: Avoid complex solidity version pragma statements.
+Type:        Violation
+Contract:    None
+Line:        2
+Source: 
+> // SPDX-License-Identifier: MIT
+> pragma solidity ^0.5.8;
+> ^^^^^^^^^^^^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Unused State Variable
+Description: Unused state variables should be removed.
+Type:        Violation
+Contract:    Provider
+Line:        5
+Source: 
+> contract Provider {
+>     address public AddressOfProvider;
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>     address public owner;
+
+[0m

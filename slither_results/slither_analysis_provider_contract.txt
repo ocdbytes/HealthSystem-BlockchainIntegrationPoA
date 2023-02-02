@@ -1,0 +1,17 @@
+Provider node:
+Low Severity (Provider.sol)
+
+Pragma version>=0.6.6<0.9.0 (provider.sol#2) is too complex
+solc-0.8.17 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+
+Parameter Provider.setProvider(address)._UserAddress (provider.sol#25) is not in mixedCase
+Parameter Provider.checkIfProvider(address)._UserAddress (provider.sol#30) is not in mixedCase
+Variable Provider.AddressOfProvider (provider.sol#5) is not in mixedCase
+Variable Provider.Providers (provider.sol#14) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+
+Provider.AddressOfProvider (provider.sol#5) should be immutable 
+Provider.owner (provider.sol#6) should be immutable 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-immutable
+provider.sol analyzed (1 contracts with 84 detectors), 8 result(s) found

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.6.6 <0.9.0;
+pragma solidity ^0.5.8;
 
 // To allow higher permissions for event having a custom data type (struct)
 pragma experimental ABIEncoderV2;
@@ -17,7 +17,7 @@ contract Main {
     /// @dev Address of the user
     address public AddressOfUser;
 
-    constructor() {
+    constructor() public {
         AddressOfUser = msg.sender;
     }
 
@@ -55,7 +55,8 @@ contract Main {
         returns (bool)
     {
         return
-            IProvider(0xAc12C37e47C3cf8ac162Da3f67364f4676825bb3)                .checkIfProvider(_AddressOfUser);
+            IProvider(0xAc12C37e47C3cf8ac162Da3f67364f4676825bb3)
+                .checkIfProvider(_AddressOfUser);
     }
 
     /// @dev MODIFIERS for provider functions

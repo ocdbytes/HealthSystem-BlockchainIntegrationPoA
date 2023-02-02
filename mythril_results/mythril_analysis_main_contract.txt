@@ -1,0 +1,126 @@
+==== State access after external call ====
+SWC ID: 107
+Severity: Low
+Contract: Main
+Function name: checkPatient(address)
+PC address: 1212
+Estimated Gas Usage: 7739 - 45369
+Read of persistent state following external call
+The contract account state is accessed after an external call to a fixed address. To prevent reentrancy issues, consider accessing the state only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+In file: ../Contract/contracts/main.sol:78
+
+PatientsData memory _patient_data = Patients[_PatientWalletAddress][0]
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x200000000, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [CREATOR], function: checkPatient(address), txdata: 0x6529c777000000000000000000000000affeaffeaffeaffeaffeaffeaffeaffeaffeaffe, decoded_data: ('0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe',), value: 0x0
+
+==== State access after external call ====
+SWC ID: 107
+Severity: Low
+Contract: Main
+Function name: checkPatient(address)
+PC address: 1239
+Estimated Gas Usage: 7739 - 45369
+Read of persistent state following external call
+The contract account state is accessed after an external call to a fixed address. To prevent reentrancy issues, consider accessing the state only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+In file: ../Contract/contracts/main.sol:78
+
+PatientsData memory _patient_data = Patients[_PatientWalletAddress][0]
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x200000000, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [CREATOR], function: checkPatient(address), txdata: 0x6529c777000000000000000000000000affeaffeaffeaffeaffeaffeaffeaffeaffeaffe, decoded_data: ('0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe',), value: 0x0
+
+==== State access after external call ====
+SWC ID: 107
+Severity: Low
+Contract: Main
+Function name: checkPatient(address)
+PC address: 1283
+Estimated Gas Usage: 7739 - 45369
+Read of persistent state following external call
+The contract account state is accessed after an external call to a fixed address. To prevent reentrancy issues, consider accessing the state only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+In file: ../Contract/contracts/main.sol:78
+
+PatientsData memory _patient_data = Patients[_PatientWalletAddress][0]
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x200000000, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [CREATOR], function: checkPatient(address), txdata: 0x6529c777000000000000000000000000affeaffeaffeaffeaffeaffeaffeaffeaffeaffe, decoded_data: ('0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe',), value: 0x0
+
+==== State access after external call ====
+SWC ID: 107
+Severity: Low
+Contract: Main
+Function name: checkPatient(address)
+PC address: 1387
+Estimated Gas Usage: 7739 - 45369
+Read of persistent state following external call
+The contract account state is accessed after an external call to a fixed address. To prevent reentrancy issues, consider accessing the state only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+In file: ../Contract/contracts/main.sol:78
+
+PatientsData memory _patient_data = Patients[_PatientWalletAddress][0]
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x200000000, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [CREATOR], function: checkPatient(address), txdata: 0x6529c777000000000000000000000000affeaffeaffeaffeaffeaffeaffeaffeaffeaffe, decoded_data: ('0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe',), value: 0x0
+
+==== State access after external call ====
+SWC ID: 107
+Severity: Low
+Contract: Main
+Function name: checkPatient(address)
+PC address: 1418
+Estimated Gas Usage: 7739 - 45369
+Read of persistent state following external call
+The contract account state is accessed after an external call to a fixed address. To prevent reentrancy issues, consider accessing the state only before the call, especially if the callee is untrusted. Alternatively, a reentrancy lock can be used to prevent untrusted callees from re-entering the contract in an intermediate state.
+--------------------
+In file: ../Contract/contracts/main.sol:78
+
+PatientsData memory _patient_data = Patients[_PatientWalletAddress][0]
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x200000000, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [CREATOR], function: checkPatient(address), txdata: 0x6529c777000000000000000000000000affeaffeaffeaffeaffeaffeaffeaffeaffeaffe, decoded_data: ('0xaffeaffeaffeaffeaffeaffeaffeaffeaffeaffe',), value: 0x0
+
+

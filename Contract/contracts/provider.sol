@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.6.6 <0.9.0;
+pragma solidity ^0.5.8;
 
 contract Provider {
     address public AddressOfProvider;
     address public owner;
 
-    constructor() {
+    constructor() public {
         AddressOfProvider = msg.sender;
         owner = msg.sender;
     }
