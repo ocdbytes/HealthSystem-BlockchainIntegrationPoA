@@ -225,6 +225,12 @@ Hence the graphs verify our prediction that polygon is better for using on block
 - low resource utilisation
 - low gas fees
 
+##  Testing Result
+
+![healthcare_vulnerability_table_final_fixed](https://user-images.githubusercontent.com/59820686/229112598-fcd3eebf-599f-46ee-9b28-a90e5bd365e3.png)
+
+
+
 # New Architecture
 
 <img src="./Readme_images/Arch2.png" width="50%"></img>
